@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+   <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Product preview card component</title> 
+
+</head>
+<body>
+
+  <header>
+  </header>
+      <main>
+        <img src="./images/image-product-mobile.jpg" alt="imagem perfume" class="img-mobile">
+        <img src="./images/image-product-desktop.jpg" alt="imagem perfume PC" class="img-desktop">
+         <div class="apresentação">
+           <h1 class="titulo-primario">PERFUME</h1>
+           <h2 class="subtitulo">Gabrielle Essence Eau De Parfum</h2>
+           <p class="texto">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+            Perfumer-Creator for the House of CHANEL.</p>
+            <div class="decrição-valor">
+              <p id="preço"> $149.99 </p> 
+              <div id="desconto">$ 169,00</div>
+            </div>
+            <div class="caixa-btn">
+              <input type="search" class="botao" placeholder="add to cart">
+            </div>
+          </div>
+      </main>
+
+      <script> 
+         var n1 = window.document.getElementById("preço")
+         var n2 = window.document.getElementById("desconto") 
+         var desconto = 169.99;
+         var per = 100; 
+         var taxa = 12;
+         var res = (taxa / per) * desconto
+         var res = (desconto - res)
+         n2.innerHTML = "$" + desconto.toFixed(2)
+         n1.innerHTML = "$" + res.toFixed(2);
+      </script> 
+    
+   
+    
+</body>
+</html> 
